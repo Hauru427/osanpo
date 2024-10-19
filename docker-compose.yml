@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 services:
   db:
     image: postgres:latest
@@ -30,10 +30,10 @@ services:
       RAILS_ENV: development
       SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
 
-    chrome:
-      image: seleniarm/standalone-chromium:latest
-      ports:
-      - 4444:4444
+  chrome:
+    image: seleniarm/standalone-chromium:latest
+    ports:
+    - 4444:4444
 
 volumes:
   postgres-data:
