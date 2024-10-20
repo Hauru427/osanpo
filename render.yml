@@ -1,0 +1,22 @@
+databases:
+  - name: osanpo_DB
+    databaseName: osanpo_db
+    user: osanpo
+    region: singapore
+
+services:
+  - type: web
+    name: osanpo
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: osanpo_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
