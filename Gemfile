@@ -55,6 +55,7 @@ group :development, :test do
   gem "factory_bot_rails"
 
   gem 'brakeman'
+  gem 'bundler-audit'
   gem 'rubocop'
 end
 
