@@ -2,7 +2,7 @@
 FROM ruby:3.2.0
 
 # 必要なライブラリをインストール
-RUN apt-get update -qq && apt-get install -y postgresql-client yarn
+RUN apt-get update -qq && apt-get install -y postgresql-client yarn nodejs
 
 # アプリケーションディレクトリを作成
 WORKDIR /app
