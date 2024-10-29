@@ -11,7 +11,7 @@ RSpec.describe 'ユーザー登録', type: :feature do
         fill_in "パスワード確認", with: "password"
         click_button "登録"
       end.to change { User.count }.by(1)
-      # expect(page).to have_content("登録が完了しました")
+      expect(page).to have_content("登録が完了しました")
     end
   end
 
@@ -22,7 +22,7 @@ RSpec.describe 'ユーザー登録', type: :feature do
         fill_in "メールアドレス", with: "test@example.com"
         click_button "登録"
       end.to change { User.count }.by(0)
-      # expect(page).to have_content("登録に失敗しました")
+      expect(page).to have_content("登録に失敗しました")
     end
   end
 end
