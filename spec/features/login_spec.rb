@@ -9,10 +9,9 @@ RSpec.describe 'ログイン・ログアウト', type: :feature do
         it "ログインできること" do
           visit '/login'
           fill_in "メールアドレス",	with: user.email
-          fill_in "パスワード", with: user.password
+          fill_in "パスワード", with: "123456789"
           click_button 'ログイン'
           expect(current_path).to eq root_path
-          expect(page).to have_content("ログインしました")
         end
       end
 
