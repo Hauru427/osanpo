@@ -2,14 +2,14 @@
   <!-- トップ固定ナビゲーション -->
   <nav class="navbar navbar-expand-md bg-body-secondary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="<%= root_path %>">Osanpo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <%= link_to 'Osanpo', root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <ul class="navbar-nav ms-auto mb-2 me-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">概要</a>
+            <%= link_to '概要', '#', class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">無効</a>
@@ -17,16 +17,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">リンク1</a></li>
-              <li><a class="dropdown-item" href="#">リンク2</a></li>
-              <li><a class="dropdown-item" href="#">リンク3</a></li>
+              <li><%= link_to 'リンク1', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to 'リンク2', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete }, class: 'dropdown-item' %></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="検索..." aria-label="検索...">
-          <button class="btn btn-outline-success flex-shrink-0" type="submit">検索</button>
-        </form>
       </div>
     </div>
   </nav>
