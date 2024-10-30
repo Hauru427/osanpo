@@ -28,4 +28,16 @@ RSpec.describe 'ログイン・ログアウト', type: :feature do
     end
   end
 
+  describe "ログアウト" do
+    before do
+      login_as(user)
+    end
+    it "ログアウトできること" do
+      find('a', text: 'ログアウト').click
+      expect(current_path).to eq root_path
+    end
+
+  end
+
+
 end
