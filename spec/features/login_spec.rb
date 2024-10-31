@@ -36,8 +36,5 @@ RSpec.describe 'ログイン・ログアウト', type: :feature do
       find('a', text: 'ログアウト').click
       expect(current_path).to eq root_path
     end
-
   end
-
-
 end
