@@ -1,0 +1,18 @@
+<header>
+  <!-- トップ固定ナビゲーション -->
+  <nav class="navbar navbar-expand-md bg-body-secondary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <%= link_to 'Osanpo', root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav ms-auto mb-2 me-2 mb-md-0">
+          <li class="nav-item">
+            <%= link_to 'ログイン', login_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
