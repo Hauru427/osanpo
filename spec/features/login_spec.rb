@@ -11,7 +11,7 @@ RSpec.describe 'ログイン・ログアウト', type: :feature do
           fill_in "メールアドレス",	with: user.email
           fill_in "パスワード", with: "123456789"
           click_button 'ログイン'
-          expect(current_path).to eq root_path
+          expect(current_path).to eq dashboard_path
         end
       end
 
