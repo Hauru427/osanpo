@@ -6,9 +6,9 @@ class PetsController < ApplicationController
   def create
     @pet = current_user.pets.build(pet_params)
     if @pet.save
-      redirect_to dashboard_path, notice: 'ペットが登録されました'
+      redirect_to dashboard_path, success: 'ワンちゃんが登録されました'
     else
-      flash.now[:alert] = 'ペットの登録に失敗しました'
+      flash.now[:danger] = 'ワンちゃんの登録に失敗しました'
       render :new
     end
   end

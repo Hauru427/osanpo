@@ -8,3 +8,4 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
     - 'spec/features/login_spec.rb'
+    - 'spec/features/pet_spec.rb'
