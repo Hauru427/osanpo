@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   # ログイン後ホーム画面
   get 'dashboard', to: 'dashboard#show'
+
+  # ペット登録
+  resources :pets, only: %i[new create]
 end
